@@ -1,0 +1,20 @@
+server:
+  port: ${eureka.port:8761}
+      
+eureka:
+  instance:
+    hostname: ${eureka.host:localhost}
+  client:
+    registerWithEureka: ${clustered:true}
+    fetchRegistry: ${clustered:true}
+    serviceUrl:
+      defaultZone: ${replica.url:http://localhost:${server.port}/eureka/}
+    healthcheck:
+      enabled: true
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
