@@ -30,4 +30,4 @@ management:
         include: '*'
 
 hello:
-  world: Hello World 1
+  world: Hello World 2
