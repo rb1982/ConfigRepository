@@ -26,6 +26,7 @@ management:
     enabled: false
   endpoints:
     web:
+      basePath: /manage
       exposure:
         include: '*'
 

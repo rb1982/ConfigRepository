@@ -16,8 +16,11 @@ zuul:
       path: /rb/** #optional - this is here for illustration only that microservice-1 can also be accessed using URI /rb
 
 management:
+  security:
+    enabled: false
   endpoints:
     web:
+      basePath: /manage
       exposure:
         include: '*'
 

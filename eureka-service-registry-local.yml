@@ -11,10 +11,12 @@ eureka:
       defaultZone: ${replica.url:http://localhost:${server.port}/eureka/}
     healthcheck:
       enabled: true
+
 management:
   security:
     enabled: false
   endpoints:
     web:
+      basePath: /manage
       exposure:
-        include: '*'  
+        include: '*' 
