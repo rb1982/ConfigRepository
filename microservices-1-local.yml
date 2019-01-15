@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+      defaultZone: ${registry.url:http://localhost:8761/eureka/}
 #  instance:
 #    instanceId: ${spring.application.name}:${server.port}
 #    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
@@ -30,4 +30,4 @@ management:
         include: '*'
 
 hello:
-  world: Hello World 33
+  world: Hello World 44
