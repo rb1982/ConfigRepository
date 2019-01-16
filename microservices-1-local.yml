@@ -38,6 +38,6 @@ spring:
     password: ${mquser:guest}
     
 hello:
-  world: Hello World 45
+  world: Hello World 46
 
   

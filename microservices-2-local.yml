@@ -26,5 +26,5 @@ spring:
     password: ${mquser:guest}
             
 test:
-  value: PROPVALUE        
+  value: PROPVALUE-1        
   
