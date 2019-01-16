@@ -19,4 +19,11 @@ management:
     web:
       basePath: /manage
       exposure:
-        include: '*' 
+        include: '*'
+
+spring:
+  rabbitmq:
+    host: ${mqhost:rabbitmqhost}
+    port: ${mqport:5672}
+    username: ${mquser:guest}
+    password: ${mquser:guest}

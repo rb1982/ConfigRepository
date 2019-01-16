@@ -24,6 +24,13 @@ management:
       exposure:
         include: '*'
 
+spring:
+  rabbitmq:
+    host: ${mqhost:rabbitmqhost}
+    port: ${mqport:5672}
+    username: ${mquser:guest}
+    password: ${mquser:guest}
+    
 ribbon:
   ReadTimeout: 30000
   SocketTimeout: 30000

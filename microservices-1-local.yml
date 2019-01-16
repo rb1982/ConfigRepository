@@ -30,5 +30,14 @@ management:
       exposure:
         include: '*'
 
+spring:
+  rabbitmq:
+    host: ${mqhost:rabbitmqhost}
+    port: ${mqport:5672}
+    username: ${mquser:guest}
+    password: ${mquser:guest}
+    
 hello:
-  world: Hello World 44
+  world: Hello World 45
+
+  

@@ -17,3 +17,14 @@ management:
       basePath: /manage
       exposure:
         include: '*'
+
+spring:
+  rabbitmq:
+    host: ${mqhost:rabbitmqhost}
+    port: ${mqport:5672}
+    username: ${mquser:guest}
+    password: ${mquser:guest}
+            
+test:
+  value: PROPVALUE        
+  
