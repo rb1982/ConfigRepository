@@ -24,6 +24,9 @@ spring:
     consul:
       host: 127.0.0.1
       port: 8500
+      discovery:
+        healthCheckPath: /manage/health
+        healthCheckInterval: 20s
             
 test:
   value: PROPVALUE-67        
