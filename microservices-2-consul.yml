@@ -1,11 +1,5 @@
 server:
   port: ${port:2268}
-
-spring:
-  cloud:
-    consul:
-      host: iris-csg-1557
-      port: 8500
       
 #  instance:
 #    instanceId: ${spring.application.name}:${server.port}
@@ -26,6 +20,10 @@ spring:
     port: ${mqport:5672}
     username: ${mquser:guest}
     password: ${mquser:guest}
+  cloud:
+    consul:
+      host: iris-csg-1557
+      port: 8500
             
 test:
   value: PROPVALUE-67        
