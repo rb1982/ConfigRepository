@@ -22,7 +22,7 @@ spring:
     password: ${mquser:guest}
   cloud:
     consul:
-      host: iris-csg-1557
+      host: 127.0.0.1
       port: 8500
             
 test:
