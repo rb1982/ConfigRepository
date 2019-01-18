@@ -15,11 +15,11 @@ management:
         include: '*'
 
 spring:
-  rabbitmq:
-    host: ${mqhost:rabbitmqhost}
-    port: ${mqport:5672}
-    username: ${mquser:guest}
-    password: ${mquser:guest}
+#  rabbitmq:
+#    host: ${mqhost:rabbitmqhost}
+#    port: ${mqport:5672}
+#    username: ${mquser:guest}
+#    password: ${mquser:guest}
   cloud:
     consul:
       host: 127.0.0.1
