@@ -1,0 +1,32 @@
+server:
+  port: ${port:2268}
+
+spring:
+  cloud:
+    consul:
+      host: iris-csg-1557
+      port: 8500
+      
+#  instance:
+#    instanceId: ${spring.application.name}:${server.port}
+#    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      basePath: /manage
+      exposure:
+        include: '*'
+
+spring:
+  rabbitmq:
+    host: ${mqhost:rabbitmqhost}
+    port: ${mqport:5672}
+    username: ${mquser:guest}
+    password: ${mquser:guest}
+            
+test:
+  value: PROPVALUE-67        
+  
