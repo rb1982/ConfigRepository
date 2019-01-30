@@ -22,7 +22,7 @@ spring:
     password: ${mquser:guest}
   cloud:
     consul:
-      host: 127.0.0.1
+      host: ${consulhost:127.0.0.1}
       port: 8500
       discovery:
         healthCheckPath: /manage/health
