@@ -1,10 +1,16 @@
 server:
   port: ${port:2268}
-      
 #  instance:
 #    instanceId: ${spring.application.name}:${server.port}
 #    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      basePath: /manage
+      exposure:
+        include: '*'
 spring:
   consul:
       host: 127.0.0.1
@@ -18,14 +24,7 @@ spring:
     username: ${mquser:guest}
     password: ${mquser:guest}
 
-management:
-  security:
-    enabled: false
-  endpoints:
-    web:
-      basePath: /manage
-      exposure:
-        include: '*'
+
 
 test:
   value: PROPVALUE-67        
