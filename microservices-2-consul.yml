@@ -8,15 +8,16 @@ management:
     enabled: false
   endpoints:
     web:
-      basePath: /manage1
+      basePath: /manage
       exposure:
         include: '*'
 spring:
-  consul:
+  cloud:
+    consul:
       host: 127.0.0.1
       port: 8500
       discovery:
-        healthCheckPath: /manage1/health
+        healthCheckPath: /manage/health
         healthCheckInterval: 20s
   rabbitmq:
     host: ${mqhost:rabbitmqhost}
