@@ -33,7 +33,7 @@ spring:
   cloud:
     consul:
       enabled: true
-      host: 172.16.16.16
+      host: ${consulhost:localhost}
       port: 8500
       discovery:
         healthCheckUrl: http://localhost:${server.port}/manage/health
