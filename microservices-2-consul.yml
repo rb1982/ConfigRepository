@@ -3,6 +3,7 @@ server:
 #  instance:
 #    instanceId: ${spring.application.name}:${server.port}
 #    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
 eureka:
   client:
     enabled: false
@@ -14,6 +15,7 @@ management:
       basePath: /manage
       exposure:
         include: '*'
+        
 spring:
   cloud:
     consul:
@@ -29,8 +31,5 @@ spring:
     username: ${mquser:guest}
     password: ${mquser:guest}
 
-
-
 test:
-  value: PROPVALUE-67        
-  
+  value: PROPVALUE-67

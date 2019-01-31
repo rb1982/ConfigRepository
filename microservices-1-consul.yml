@@ -6,9 +6,7 @@ server:
 
 eureka:
   client:
-    enabled: true
-    serviceUrl:
-      defaultZone: ${registry.url:http://localhost:8761/eureka/}
+    enabled: false
 
 ribbon:
   ReadTimeout: 30000
@@ -34,12 +32,17 @@ management:
 spring:
   cloud:
     consul:
-      enabled: false
+      enabled: true
+      host: 172.16.16.16
+      port: 8500
+      discovery:
+        healthCheckUrl: http://localhost:${server.port}/manage/health
+        healthCheckInterval: 20s
   rabbitmq:
     host: ${mqhost:rabbitmqhost}
     port: ${mqport:5672}
     username: ${mquser:guest}
     password: ${mquser:guest}
-    
+
 hello:
   world: Hello World 67
