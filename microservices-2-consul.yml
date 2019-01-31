@@ -17,7 +17,7 @@ management:
 spring:
   cloud:
     consul:
-      enabled: false
+      enabled: true
       host: 172.16.16.16
       port: 8500
       discovery:
