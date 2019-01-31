@@ -14,7 +14,7 @@ management:
 spring:
   cloud:
     consul:
-      host: 127.0.0.1
+      host: 172.16.16.16
       port: 8500
       discovery:
         healthCheckPath: /manage/health
