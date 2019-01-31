@@ -5,6 +5,19 @@ server:
 #    instanceId: ${spring.application.name}:${server.port}
 #    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
+spring:
+  consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        healthCheckPath: /manage/health
+        healthCheckInterval: 20s
+  rabbitmq:
+    host: ${mqhost:rabbitmqhost}
+    port: ${mqport:5672}
+    username: ${mquser:guest}
+    password: ${mquser:guest}
+
 management:
   security:
     enabled: false
@@ -14,20 +27,6 @@ management:
       exposure:
         include: '*'
 
-spring:
-  rabbitmq:
-    host: ${mqhost:rabbitmqhost}
-    port: ${mqport:5672}
-    username: ${mquser:guest}
-    password: ${mquser:guest}
-  cloud:
-    consul:
-      host: 127.0.0.1
-      port: 8500
-      discovery:
-        healthCheckPath: /manage/health
-        healthCheckInterval: 20s
-            
 test:
   value: PROPVALUE-67        
   
