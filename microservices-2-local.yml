@@ -30,4 +30,4 @@ spring:
     password: ${mquser:guest}
             
 test:
-  value: PROPVALUE-67
+  value: PROPVALUE-667
