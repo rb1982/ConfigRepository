@@ -45,4 +45,4 @@ spring:
     password: ${mquser:guest}
 
 hello:
-  world: Hello World 67
+  world: Hello World 667
